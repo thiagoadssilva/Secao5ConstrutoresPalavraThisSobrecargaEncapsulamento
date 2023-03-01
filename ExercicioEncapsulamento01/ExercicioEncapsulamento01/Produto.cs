@@ -4,18 +4,18 @@ namespace ExercicioEncapsulamento01
 {
     public class Produto
     {
-        private string _nome;
-        public double Preco { get; private set; }
-        public int Quantidade { get; private set; }
+        private string _nome; // Atributos privados
+        public double Preco { get; private set; } // Propriedades autoimplementadas
+        public int Quantidade { get; private set; } // Propriedades autoimplementadas
 
-        public Produto(string nome, double preco, int quantidade)
+        public Produto(string nome, double preco, int quantidade) // Construtores
         {
             _nome = nome;
             Preco = preco;
             Quantidade = quantidade;
         }
 
-        public string Nome
+        public string Nome // Propriedades customizadas
         {
             get { return _nome; }
             set
@@ -55,19 +55,20 @@ namespace ExercicioEncapsulamento01
             return _quantidade;
         }*/
 
-        public double ValorTotalEmEstoque()
+        public double ValorTotalEmEstoque() // Outros métodos da classe
+
         {
             return Preco * Quantidade;
         }
-        public void AdicionarProdutos(int quantidade)
+        public void AdicionarProdutos(int quantidade) // Outros métodos da classe
         {
             Quantidade += quantidade;
         }
-        public void RemoverProdutos(int quantidade)
+        public void RemoverProdutos(int quantidade) // Outros métodos da classe
         {
             Preco -= quantidade;
         }
-        public override string ToString()
+        public override string ToString() // Outros métodos da classe
         {
             return _nome
             + ", $ "
