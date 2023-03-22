@@ -22,9 +22,10 @@ namespace ExercicioContaBancaria
             Titular = titular;
         }
 
-        public ContaBancaria(int numero, string titular, double saldo) : this(numero, titular)
+        public ContaBancaria(int numero, string titular, double deposito) : this(numero, titular)
         {
-            Saldo = saldo;
+            Deposito(deposito);
+            //Saldo = saldo;
         }
 
         public void Deposito(double quantidade)
@@ -39,7 +40,12 @@ namespace ExercicioContaBancaria
 
         public override string ToString()
         {
-            return "Conta " + Numero + ", Titular: " + Titular + ", Saldo: $ " + Saldo.ToString("F2", CultureInfo.InvariantCulture);
+            return "Conta " 
+                + Numero 
+                + ", Titular: " 
+                + Titular 
+                + ", Saldo: $ " 
+                + Saldo.ToString("F2", CultureInfo.InvariantCulture);
         }
     }
 }
